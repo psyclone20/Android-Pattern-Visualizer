@@ -5,10 +5,12 @@ var sortedPatterns;
 var currentMode = "random";
 var isModeChanged = false;
 
-drawLayout();
-drawPoints();
-setSVGPaths();
-getPatterns();
+function onPhoneFrameLoaded() {
+	drawLayout();
+	drawPoints();
+	setSVGPaths();
+	getPatterns();
+}
 
 function beginRandomMode() {
 	isModeChanged = true;
