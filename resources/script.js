@@ -25,7 +25,7 @@ function beginSequentialMode() {
 
 function drawLayout() {
 	if (screen.width > 1024)
-		document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30;
+		document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30 + "px";
 }
 
 function drawPoints() {
@@ -37,12 +37,12 @@ function drawPoints() {
 
 	var points = document.getElementsByClassName('point');
 	for (var i=0; i<points.length; i++) {
-		points[i].style.top = startY + Math.floor(i/gridSize)*pointSpacing + pointRadius;
-		points[i].style.left = startX + (i%gridSize)*pointSpacing + pointRadius;
+		points[i].style.top = startY + Math.floor(i/gridSize)*pointSpacing + pointRadius + "px";
+		points[i].style.left = startX + (i%gridSize)*pointSpacing + pointRadius + "px";
 	}
 
 	var patternSVGStyle = document.getElementById('pattern').style;
-	patternSVGStyle.height = patternSVGStyle.width = 2*pointSpacing + 4*pointRadius;
+	patternSVGStyle.height = patternSVGStyle.width = 2*pointSpacing + 4*pointRadius + "px";
 }
 
 function setSVGPaths() {
