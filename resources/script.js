@@ -5,10 +5,12 @@ var sortedPatterns;
 var currentMode = "random";
 var isModeChanged = false;
 
-drawLayout();
-drawPoints();
-setSVGPaths();
-getPatterns();
+function onBodyLoaded() {
+	drawLayout();
+	drawPoints();
+	setSVGPaths();
+	getPatterns();
+}
 
 function beginRandomMode() {
 	isModeChanged = true;
@@ -23,8 +25,6 @@ function beginSequentialMode() {
 function drawLayout() {
 	if (screen.width > 1024)
 		document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30;
-	
-	debugger
 }
 
 function drawPoints() {
@@ -42,8 +42,6 @@ function drawPoints() {
 
 	var patternSVGStyle = document.getElementById('pattern').style;
 	patternSVGStyle.height = patternSVGStyle.width = 2*pointSpacing + 4*pointRadius;
-	
-	debugger
 }
 
 function setSVGPaths() {
@@ -64,8 +62,6 @@ function setSVGPaths() {
 		paths[i].setAttribute('stroke-miterlimit', 10);
 		paths[i].setAttribute('stroke-opacity', 0);
 		paths[i].setAttribute('data-ignore', true);
-		
-		debugger
 	}
 }
 
