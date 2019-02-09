@@ -8,6 +8,7 @@ var isModeChanged = false;
 drawLayout();
 drawPoints();
 setSVGPaths();
+debugger
 getPatterns();
 
 function beginRandomMode() {
