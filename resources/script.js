@@ -23,7 +23,7 @@ function beginSequentialMode() {
 }
 
 function drawLayout() {
-	if (screen.width > 1024)
+	if (screen.width >= 1024)
 		document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30 + "px";
 }
 
