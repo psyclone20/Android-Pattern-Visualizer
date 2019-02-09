@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>Android Pattern Visualizer</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+		<link rel="stylesheet" href="resources/style.css" />
+	</head>
+	<body>
+		<div id="phone_container">
+			<img id="phone_frame" src="resources/phone_frame.png" />
+
+			<div id="point_grid">
+				<span class="point" id="point0"></span>
+				<span class="point" id="point1"></span>
+				<span class="point" id="point2"></span>
+				<span class="point" id="point3"></span>
+				<span class="point" id="point4"></span>
+				<span class="point" id="point5"></span>
+				<span class="point" id="point6"></span>
+				<span class="point" id="point7"></span>
+				<span class="point" id="point8"></span>
+
+				<svg id="pattern">
+					<path class="pattern_path" id="line_0to1" startpoint="0" endpoint="1" />
+					<path class="pattern_path" id="line_0to2" startpoint="0" endpoint="2" />
+					<path class="pattern_path" id="line_0to3" startpoint="0" endpoint="3" />
+					<path class="pattern_path" id="line_0to4" startpoint="0" endpoint="4" />
+					<path class="pattern_path" id="line_0to5" startpoint="0" endpoint="5" />
+					<path class="pattern_path" id="line_0to6" startpoint="0" endpoint="6" />
+					<path class="pattern_path" id="line_0to7" startpoint="0" endpoint="7" />
+					<path class="pattern_path" id="line_0to8" startpoint="0" endpoint="8" />
+					
+					<path class="pattern_path" id="line_1to0" startpoint="1" endpoint="0" />
+					<path class="pattern_path" id="line_1to2" startpoint="1" endpoint="2" />
+					<path class="pattern_path" id="line_1to3" startpoint="1" endpoint="3" />
+					<path class="pattern_path" id="line_1to4" startpoint="1" endpoint="4" />
+					<path class="pattern_path" id="line_1to5" startpoint="1" endpoint="5" />
+					<path class="pattern_path" id="line_1to6" startpoint="1" endpoint="6" />
+					<path class="pattern_path" id="line_1to7" startpoint="1" endpoint="7" />
+					<path class="pattern_path" id="line_1to8" startpoint="1" endpoint="8" />
+					
+					<path class="pattern_path" id="line_2to0" startpoint="2" endpoint="0" />
+					<path class="pattern_path" id="line_2to1" startpoint="2" endpoint="1" />
+					<path class="pattern_path" id="line_2to3" startpoint="2" endpoint="3" />
+					<path class="pattern_path" id="line_2to4" startpoint="2" endpoint="4" />
+					<path class="pattern_path" id="line_2to5" startpoint="2" endpoint="5" />
+					<path class="pattern_path" id="line_2to6" startpoint="2" endpoint="6" />
+					<path class="pattern_path" id="line_2to7" startpoint="2" endpoint="7" />
+					<path class="pattern_path" id="line_2to8" startpoint="2" endpoint="8" />
+					
+					<path class="pattern_path" id="line_3to0" startpoint="3" endpoint="0" />
+					<path class="pattern_path" id="line_3to1" startpoint="3" endpoint="1" />
+					<path class="pattern_path" id="line_3to2" startpoint="3" endpoint="2" />
+					<path class="pattern_path" id="line_3to4" startpoint="3" endpoint="4" />
+					<path class="pattern_path" id="line_3to5" startpoint="3" endpoint="5" />
+					<path class="pattern_path" id="line_3to6" startpoint="3" endpoint="6" />
+					<path class="pattern_path" id="line_3to7" startpoint="3" endpoint="7" />
+					<path class="pattern_path" id="line_3to8" startpoint="3" endpoint="8" />
+					
+					<path class="pattern_path" id="line_4to0" startpoint="4" endpoint="0" />
+					<path class="pattern_path" id="line_4to1" startpoint="4" endpoint="1" />
+					<path class="pattern_path" id="line_4to2" startpoint="4" endpoint="2" />
+					<path class="pattern_path" id="line_4to3" startpoint="4" endpoint="3" />
+					<path class="pattern_path" id="line_4to5" startpoint="4" endpoint="5" />
+					<path class="pattern_path" id="line_4to6" startpoint="4" endpoint="6" />
+					<path class="pattern_path" id="line_4to7" startpoint="4" endpoint="7" />
+					<path class="pattern_path" id="line_4to8" startpoint="4" endpoint="8" />
+					
+					<path class="pattern_path" id="line_5to0" startpoint="5" endpoint="0" />
+					<path class="pattern_path" id="line_5to1" startpoint="5" endpoint="1" />
+					<path class="pattern_path" id="line_5to2" startpoint="5" endpoint="2" />
+					<path class="pattern_path" id="line_5to3" startpoint="5" endpoint="3" />
+					<path class="pattern_path" id="line_5to4" startpoint="5" endpoint="4" />
+					<path class="pattern_path" id="line_5to6" startpoint="5" endpoint="6" />
+					<path class="pattern_path" id="line_5to7" startpoint="5" endpoint="7" />
+					<path class="pattern_path" id="line_5to8" startpoint="5" endpoint="8" />
+					
+					<path class="pattern_path" id="line_6to0" startpoint="6" endpoint="0" />
+					<path class="pattern_path" id="line_6to1" startpoint="6" endpoint="1" />
+					<path class="pattern_path" id="line_6to2" startpoint="6" endpoint="2" />
+					<path class="pattern_path" id="line_6to3" startpoint="6" endpoint="3" />
+					<path class="pattern_path" id="line_6to4" startpoint="6" endpoint="4" />
+					<path class="pattern_path" id="line_6to5" startpoint="6" endpoint="5" />
+					<path class="pattern_path" id="line_6to7" startpoint="6" endpoint="7" />
+					<path class="pattern_path" id="line_6to8" startpoint="6" endpoint="8" />
+					
+					<path class="pattern_path" id="line_7to0" startpoint="7" endpoint="0" />
+					<path class="pattern_path" id="line_7to1" startpoint="7" endpoint="1" />
+					<path class="pattern_path" id="line_7to2" startpoint="7" endpoint="2" />
+					<path class="pattern_path" id="line_7to3" startpoint="7" endpoint="3" />
+					<path class="pattern_path" id="line_7to4" startpoint="7" endpoint="4" />
+					<path class="pattern_path" id="line_7to5" startpoint="7" endpoint="5" />
+					<path class="pattern_path" id="line_7to6" startpoint="7" endpoint="6" />
+					<path class="pattern_path" id="line_7to8" startpoint="7" endpoint="8" />
+					
+					<path class="pattern_path" id="line_8to0" startpoint="8" endpoint="0" />
+					<path class="pattern_path" id="line_8to1" startpoint="8" endpoint="1" />
+					<path class="pattern_path" id="line_8to2" startpoint="8" endpoint="2" />
+					<path class="pattern_path" id="line_8to3" startpoint="8" endpoint="3" />
+					<path class="pattern_path" id="line_8to4" startpoint="8" endpoint="4" />
+					<path class="pattern_path" id="line_8to5" startpoint="8" endpoint="5" />
+					<path class="pattern_path" id="line_8to6" startpoint="8" endpoint="6" />
+					<path class="pattern_path" id="line_8to7" startpoint="8" endpoint="7" />
+				</svg>
+			</div>
+		</div>
+		<div id="text_container">
+			<h1>Android Pattern Visualizer</h1>
+			
+			<div class="mode-selector">
+				<input type="radio" id="mode-random" name="selector" onchange="beginRandomMode()" checked><label for="mode-random">Random</label><input type="radio" id="mode-sequential" name="selector" onchange="beginSequentialMode()"><label for="mode-sequential">Sequential</label>
+			</div>
+			
+		</div>
+
+		<script src="resources/script.js"></script>
+	</body>
+</html>
