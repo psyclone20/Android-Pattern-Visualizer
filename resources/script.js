@@ -6,6 +6,7 @@ var currentMode = "random";
 var isModeChanged = false;
 
 function onBodyLoaded() {
+	debugger
 	drawLayout();
 	drawPoints();
 	setSVGPaths();
