@@ -34,6 +34,7 @@ function drawLayout() {
 }
 
 function drawHorizontalLayout() {
+	console.log('Drawing horizontal layout');
 	var phoneFrame = document.getElementById('phone_frame');
 	phoneFrame.style.height = window.innerHeight + 'px';
 	document.getElementById('phone_container').style.left = '0px';
