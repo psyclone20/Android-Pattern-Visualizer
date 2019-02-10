@@ -7,9 +7,11 @@ var isModeChanged = false;
 
 function onPhoneFrameLoaded() {
 	drawLayout();
-	drawPoints();
-	setSVGPaths();
 	getPatterns();
+}
+
+window.onresize = function() {
+	drawLayout():
 }
 
 function beginRandomMode() {
@@ -23,8 +25,10 @@ function beginSequentialMode() {
 }
 
 function drawLayout() {
-	if (screen.width > 620)
+	if (screen.width > 768)
 		document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30 + "px";
+	drawPoints();
+	setSVGPaths();
 }
 
 function drawPoints() {
