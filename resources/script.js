@@ -27,6 +27,8 @@ function beginSequentialMode() {
 function drawLayout() {
 	if (screen.width > 768)
 		document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30 + "px";
+	else
+		document.getElementById('text_container').style.left = "5%";
 	drawPoints();
 	setSVGPaths();
 }
