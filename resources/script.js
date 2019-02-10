@@ -34,10 +34,16 @@ function drawLayout() {
 }
 
 function drawHorizontalLayout() {
-	document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30 + "px";
+	var phoneFrame = document.getElementById('phone_frame');
+	phoneFrame.style.height = window.innerHeight + 'px';
+	phoneFrame.style.left = '0px';
+	document.getElementById('text_container').style.left = phoneFrame.offsetWidth + 30 + "px";
 }
 
 function drawVerticalLayout() {
+	var phoneFrame = document.getElementById('phone_frame');
+	phoneFrame.style.height = Math.floor(0.6*window.innerHeight) + 'px';
+	phoneFrame.style.left = (window.innerWidth - phoneFrame.offsetWidth) / 2 + 'px';
 	document.getElementById('text_container').style.left = "5%";
 }
 
