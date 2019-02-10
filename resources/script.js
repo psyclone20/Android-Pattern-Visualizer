@@ -25,12 +25,20 @@ function beginSequentialMode() {
 }
 
 function drawLayout() {
-	if (screen.width > 768)
-		document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30 + "px";
+	if (screen.width > 768 || window.orientation == -90 || window.orientation == 90)
+		drawHorizontalLayout();
 	else
-		document.getElementById('text_container').style.left = "5%";
+		drawVerticalLayout();
 	drawPoints();
 	setSVGPaths();
+}
+
+function drawHorizontalLayout() {
+	document.getElementById('text_container').style.left = document.getElementById('phone_frame').offsetWidth + 30 + "px";
+}
+
+function drawVerticalLayout() {
+	document.getElementById('text_container').style.left = "5%";
 }
 
 function drawPoints() {
