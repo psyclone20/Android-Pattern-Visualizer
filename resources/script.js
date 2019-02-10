@@ -10,10 +10,6 @@ function onPhoneFrameLoaded() {
 	getPatterns();
 }
 
-window.onresize = function() {
-	drawLayout();
-}
-
 function beginRandomMode() {
 	isModeChanged = true;
 	currentMode = "random";
@@ -47,6 +43,8 @@ function drawVerticalLayout() {
 	document.getElementById('phone_container').style.bottom = '0px';
 	document.getElementById('text_container').style.left = "5%";
 }
+
+window.addEventListener('orientationchange', drawLayout);
 
 function drawPoints() {
 	var gridSize = 3;
