@@ -11,7 +11,7 @@ function onPhoneFrameLoaded() {
 }
 
 window.onresize = function() {
-	drawLayout():
+	drawLayout();
 }
 
 function beginRandomMode() {
