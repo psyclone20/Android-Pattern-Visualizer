@@ -5,6 +5,8 @@ var sortedPatterns;
 var currentMode = "random";
 var isModeChanged = false;
 
+window.addEventListener('orientationchange', drawLayout);
+
 function onPhoneFrameLoaded() {
 	drawLayout();
 	getPatterns();
@@ -43,8 +45,6 @@ function drawVerticalLayout() {
 	document.getElementById('phone_container').style.bottom = '0px';
 	document.getElementById('text_container').style.left = "5%";
 }
-
-window.addEventListener('orientationchange', drawLayout);
 
 function drawPoints() {
 	var gridSize = 3;
