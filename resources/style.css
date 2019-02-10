@@ -77,10 +77,6 @@ label + input[type=radio] + label {
 }
 
 @media only screen and (max-width:620px) {
-	body {
-		background-color: #FF00FF;
-	}
-
 	#phone_container {
 		left: 50%;
 		transform: translateX(-53%);
@@ -123,5 +119,9 @@ label + input[type=radio] + label {
 		position: absolute;
 		top: 52%;
 		left: 28%;
+	}
+
+	#text_container {
+		top: 0;
 	}
 }
