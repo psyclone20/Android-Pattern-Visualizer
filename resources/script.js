@@ -121,7 +121,7 @@ function drawPattern(pattern, index, justBegun) {
 		if (currentMode == "sequential")
 			patterns = sortedPatterns;
 		else
-			patterns = shuffledPatterns;
+			patterns = shuffle(shuffledPatterns);
 
 		drawPattern(patterns[0], 0, true);
 		return;
