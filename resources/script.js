@@ -44,6 +44,7 @@ function drawVerticalLayout() {
 	var phoneFrame = document.getElementById('phone_frame');
 	phoneFrame.style.height = Math.floor(0.75*window.innerHeight) + 'px';
 	document.getElementById('phone_container').style.left = (window.innerWidth - phoneFrame.offsetWidth) / 2 + 'px';
+	document.getElementById('phone_container').style.bottom = '0px';
 	document.getElementById('text_container').style.left = "5%";
 }
 
