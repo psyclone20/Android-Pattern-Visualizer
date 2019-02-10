@@ -33,17 +33,21 @@ function drawLayout() {
 
 function drawHorizontalLayout() {
 	var phoneFrame = document.getElementById('phone_frame');
+	var textContainer = document.getElementById('text_container');
 	phoneFrame.style.height = window.innerHeight + 'px';
 	document.getElementById('phone_container').style.left = '0px';
-	document.getElementById('text_container').style.left = phoneFrame.offsetWidth + 30 + "px";
+	textContainer.style.left = phoneFrame.offsetWidth + 30 + "px";
+	textContainer.style.top = '15%';
 }
 
 function drawVerticalLayout() {
 	var phoneFrame = document.getElementById('phone_frame');
+	var phoneContainer = document.getElementById('phone_container');
+	var textContainer = document.getElementById('text_container');
 	phoneFrame.style.height = Math.floor(0.75*window.innerHeight) + 'px';
-	document.getElementById('phone_container').style.left = (window.innerWidth - phoneFrame.offsetWidth) / 2 + 'px';
-	document.getElementById('phone_container').style.bottom = '0px';
-	document.getElementById('text_container').style.left = "5%";
+	phoneContainer.style.left = (window.innerWidth - phoneFrame.offsetWidth) / 2 + 'px';
+	phoneContainer.style.bottom = '0px';
+	textContainer.style.left = textContainer.style.top = '5%';
 }
 
 function drawPoints() {
