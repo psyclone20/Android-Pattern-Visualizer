@@ -34,7 +34,8 @@ function drawLayout() {
 }
 
 function drawHorizontalLayout() {
-	document.getElementById('phone_frame').height = window.innerHeight + 'px';
+	var phoneFrame = document.getElementById('phone_frame');
+	phoneFrame.height = window.innerHeight + 'px';
 	document.getElementById('phone_container').style.left = '0px';
 	document.getElementById('text_container').style.left = phoneFrame.offsetWidth + 30 + "px";
 }
