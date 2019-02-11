@@ -24,11 +24,17 @@ function beginSequentialMode() {
 
 function drawLayout() {
 	if (screen.width > 768 || window.orientation == -90 || window.orientation == 90)
-		drawHorizontalLayout();
+		setTimeout(function() {
+			drawHorizontalLayout();
+			drawPoints();
+			setSVGPaths();
+		}, 250);
 	else
-		drawVerticalLayout();
-	drawPoints();
-	setSVGPaths();
+		setTimeout(function() {
+			drawVerticalLayout();
+			drawPoints();
+			setSVGPaths();
+		}, 250);
 }
 
 function drawHorizontalLayout() {
@@ -38,7 +44,6 @@ function drawHorizontalLayout() {
 	document.getElementById('phone_container').style.left = '0px';
 	textContainer.style.left = phoneFrame.offsetWidth + 30 + "px";
 	textContainer.style.top = '15%';
-	document.body.style.backgroundColor = "red";
 }
 
 function drawVerticalLayout() {
@@ -49,7 +54,6 @@ function drawVerticalLayout() {
 	phoneContainer.style.left = (window.innerWidth - phoneFrame.offsetWidth) / 2 + 'px';
 	phoneContainer.style.bottom = '0px';
 	textContainer.style.left = textContainer.style.top = '5%';
-	document.body.style.backgroundColor = "yellow";
 }
 
 function drawPoints() {
