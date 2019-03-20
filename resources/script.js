@@ -1,4 +1,5 @@
 var pointRadius = 4;
+var patternCount;
 var patterns;
 var shuffledPatterns;
 var sortedPatterns;
@@ -39,21 +40,26 @@ function drawLayout() {
 
 function drawHorizontalLayout() {
 	var phoneFrame = document.getElementById('phone_frame');
-	var textContainer = document.getElementById('text_container');
+	var textContainerTop = document.getElementById('text_container_top');
+	var textContainerBottom = document.getElementById('text_container_bottom');
 	phoneFrame.style.height = window.innerHeight + 'px';
 	document.getElementById('phone_container').style.left = '0px';
-	textContainer.style.left = phoneFrame.offsetWidth + 30 + "px";
-	textContainer.style.top = '15%';
+	textContainerTop.style.left = textContainerBottom.style.left = phoneFrame.offsetWidth + 30 + "px";
+	textContainerTop.style.top = '15%';
+	textContainerBottom.style.bottom = "10%";
 }
 
 function drawVerticalLayout() {
 	var phoneFrame = document.getElementById('phone_frame');
 	var phoneContainer = document.getElementById('phone_container');
-	var textContainer = document.getElementById('text_container');
+	var textContainerTop = document.getElementById('text_container_top');
+	var textContainerBottom = document.getElementById('text_container_bottom');
 	phoneFrame.style.height = Math.floor(0.75*window.innerHeight) + 'px';
 	phoneContainer.style.left = (window.innerWidth - phoneFrame.offsetWidth) / 2 + 'px';
-	phoneContainer.style.bottom = '0px';
-	textContainer.style.left = textContainer.style.top = '5%';
+	textContainerTop.style.left = textContainerTop.style.top = '5%';
+	phoneContainer.style.top = textContainerTop.offsetTop + textContainerTop.offsetHeight + 'px';
+	textContainerBottom.style.top = phoneContainer.offsetTop + phoneContainer.offsetHeight + 'px';
+	textContainerBottom.innerHTML += '<br /><br />';
 }
 
 function drawPoints() {
@@ -98,15 +104,16 @@ function getPatterns() {
 	var xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() { 
 		if (xhr.readyState == 4 && xhr.status == 200) {
-			patterns = xhr.responseText.split('\n');
-			patterns.splice(-1, 1);
-			shuffledPatterns = shuffle(patterns);
-			sortedPatterns = patterns.slice();
-			sortedPatterns.sort();
-			drawPattern(shuffledPatterns[0], 0, true);
+			sortedPatterns = xhr.responseText.split('\n');
+			sortedPatterns.splice(-1, 1);
+			shuffledPatterns = shuffle(sortedPatterns.slice());
+			patterns = shuffledPatterns;
+			patternCount = patterns.length;
+			document.getElementById('pattern_count_indicator').innerHTML = '<b>Pattern <p id="currentPattern">1</p> of ' + patternCount + '</b>';
+			drawPattern(patterns[0], 0, true);
 		}
 	}
-	xhr.open('GET', 'https://raw.githubusercontent.com/psyclone20/Android-Pattern-Generator/master/output/shuffled.txt', true);
+	xhr.open('GET', 'https://raw.githubusercontent.com/psyclone20/Android-Pattern-Generator/master/output/sequential.txt', true);
 	xhr.send(null);
 }
 
@@ -142,6 +149,7 @@ function drawPattern(pattern, index, justBegun) {
 
 	if (justBegun === true) {
 		resetPattern();
+		document.getElementById('currentPattern').innerHTML = (index + 1);
 		document.getElementById('point' + currentPoint).classList.add('point-active');
 	}
 
@@ -157,7 +165,7 @@ function drawPattern(pattern, index, justBegun) {
 			new Vivus('pattern', {duration: 15}, drawPattern(pattern.substring(1), index, false));
 		else {
 			var nextIndex = index+1;
-			if (nextIndex < patterns.length)
+			if (nextIndex < patternCount)
 				setTimeout(function() {
 					drawPattern(patterns[nextIndex], nextIndex, true);
 				}, 750);
