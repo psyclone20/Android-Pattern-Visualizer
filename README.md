@@ -9,7 +9,7 @@ A _Sequential_ mode is also provided to help demonstrate how the patterns were a
 ### [See the page in action](https://psyclone20.github.io/Android-Pattern-Visualizer)
 
 To learn how I generated the patterns, please visit the [Android Pattern Generator repository](https://github.com/psyclone20/Android-Pattern-Generator)
-
+<br><br>
 # Credits
 * [maxwellito](https://github.com/maxwellito) for [Vivus](https://github.com/maxwellito/vivus)
 * [Toastcode for Screener](https://play.google.com/store/apps/details?id=de.toastcode.screener&hl=en_IN)
