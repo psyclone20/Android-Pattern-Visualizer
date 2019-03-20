@@ -6,6 +6,12 @@ The _Random_ mode gives a screensaver worthy animation of all the patterns in a 
 
 A _Sequential_ mode is also provided to help demonstrate how the patterns were actually generated using depth-first search.
 <br><br>
-## [See the page in action](https://psyclone20.github.io/Android-Pattern-Visualizer)
-<br><br>
+### [See the page in action](https://psyclone20.github.io/Android-Pattern-Visualizer)
+
 To learn how I generated the patterns, please visit the [Android Pattern Generator repository](https://github.com/psyclone20/Android-Pattern-Generator)
+
+# Credits
+* [maxwellito](https://github.com/maxwellito) for [Vivus](https://github.com/maxwellito/vivus)
+* [Toastcode for Screener](https://play.google.com/store/apps/details?id=de.toastcode.screener&hl=en_IN)
+* Google EarthView for the [wallpaper](https://earthview.withgoogle.com/illizi-algeria-1102)
+* [skeddles](https://codepen.io/skeddles) for the [pretty radio button](https://codepen.io/skeddles/pen/PbROLK)
