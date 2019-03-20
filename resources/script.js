@@ -56,7 +56,9 @@ function drawVerticalLayout() {
 	var textContainerBottom = document.getElementById('text_container_bottom');
 	phoneFrame.style.height = Math.floor(0.75*window.innerHeight) + 'px';
 	phoneContainer.style.left = (window.innerWidth - phoneFrame.offsetWidth) / 2 + 'px';
-	textContainerTop.style.left = textContainerTop.style.top = '5%';
+	textContainerTop.innerHTML = textContainerTop.innerHTML.replace('h1', 'h2');
+	textContainerTop.style.left = '5%';
+	textContainerTop.style.top = '0px';
 	phoneContainer.style.top = textContainerTop.offsetTop + textContainerTop.offsetHeight + 'px';
 	textContainerBottom.style.top = phoneContainer.offsetTop + phoneContainer.offsetHeight + 'px';
 	textContainerBottom.innerHTML += '<br /><br />';
