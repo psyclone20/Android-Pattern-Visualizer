@@ -8,14 +8,20 @@ body {
 	position: absolute;
 }
 
-#text_container {
-	position: absolute;
-	top: 15%;
-}
-
 #phone_frame {
 	height: 100%;
 	width: auto;
+}
+
+#pattern_count_indicator {
+	position: absolute;
+	top: 48%;
+	left: 36%;
+	font-size: 12px;
+}
+
+#currentPattern {
+	display: inline;
 }
 
 #point_grid {
@@ -35,6 +41,11 @@ body {
 
 .point-active {
 	animation: expand-and-contract 0.6s;
+}
+
+#text_container_top {
+	position: absolute;
+	top: 15%;
 }
 
 input[type=radio] {
@@ -67,6 +78,25 @@ label + input[type=radio] + label {
   overflow: hidden;
 }
 
+#text_container_bottom {
+	position: absolute;
+	bottom: 5%;
+}
+
+h5 {
+	margin-bottom: 10px;
+}
+
+a {
+	color: #DDDDDD;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 @keyframes expand-and-contract {
   0% {
     transform: scale(2.2);
@@ -75,52 +105,3 @@ label + input[type=radio] + label {
     transform: scale(1.0);
   }
 }
-
-/*
-@media only screen and (max-width:620px) {
-	#phone_container {
-		left: 50%;
-		transform: translateX(-53%);
-		bottom: 0;
-	}
-
-	#phone_frame {
-		height: 70%;
-		width: auto;
-	}
- 
-	#point_grid {
-		position: absolute;
-		top: 54%;
-		left: 29%;
-	}
-
-	#text_container {
-		top: 0;
-	}
-}
-
-@media only screen and (min-width: 620px) and (max-width:768px) {
-	#phone_container {
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 0;
-	}
-
-	#phone_frame {
-		height: 70%;
-		width: auto;
-	}
- 
-	#point_grid {
-		position: absolute;
-		top: 52%;
-		left: 28%;
-	}
-
-	#text_container {
-		position: absolute;
-		top: 0;
-	}
-}
-*/
