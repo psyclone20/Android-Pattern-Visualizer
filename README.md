@@ -6,6 +6,11 @@ The _Random_ mode gives a screensaver worthy animation of all the patterns in a 
 
 A _Sequential_ mode is also provided to help demonstrate how the patterns were actually generated using depth-first search.
 <br><br>
+
+![Sample 1](https://github.com/psyclone20/Android-Pattern-Visualizer/blob/master/resources/pattern1.png)
+![Sample 2](https://github.com/psyclone20/Android-Pattern-Visualizer/blob/master/resources/pattern2.png)
+![Sample 3](https://github.com/psyclone20/Android-Pattern-Visualizer/blob/master/resources/pattern3.png)
+
 ### [See the page in action](https://psyclone20.github.io/Android-Pattern-Visualizer)
 
 To learn how I generated the patterns, please visit the [Android Pattern Generator repository](https://github.com/psyclone20/Android-Pattern-Generator)
